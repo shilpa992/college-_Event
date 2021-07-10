@@ -1,0 +1,53 @@
+{% extends 'event/home.html' %}
+{% block content %}
+{% load static %}
+<style>
+    body{
+        background-image: url("{% static '/images/img1.jpg' %}");
+    }
+    
+</style>
+<body>
+    <div class="container">
+      <div class="d-flex justify-content-center h-100">
+        <div class="card">
+          <div class="card-header">
+            <h1>Welcome To <img style="width: 200px; " src="{% static '/images/yuva.png' %}"> </h1>
+          </div>
+          <div class="card-header">
+            <h3>Sign In</h3>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="bi-person-fill"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="username">
+              </div>
+              <br>
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="bi bi-key-fill"></i></span>
+                </div>
+                <input type="password" class="form-control" placeholder="password">
+              </div>
+              <br>
+              <div class="form-group">
+                <input type="submit" value="Login" class="login_btn">
+              </div>
+            </form>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex justify-content-center links">
+              Don't have an account?<button class="sign-up-link"><a href="#"></a>Sign Up</button>
+            </div>
+            <div class="d-flex justify-content-center">
+              <a href="#">Forgot your password?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+{% endblock %}
